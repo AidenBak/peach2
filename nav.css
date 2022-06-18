@@ -1,0 +1,154 @@
+:root {
+    --text-color: #2E3C7E;
+    --background-color : #FBEAEB;
+    --accent-color: rgb(246, 216, 162);
+}
+body {
+    font-family: roboto, arial;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 8px 12px;
+    border-bottom: 4px solid var(--accent-color);
+    z-index: 100;
+
+}
+
+.navbar-logo {
+    white-space: nowrap;
+    width: 150px;
+    padding-left: 40px;
+    font-size: 24px;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.navbar-logo i {
+    color: var(--text-color)
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0 50px;
+}
+
+.navbar-menu li {
+    white-space: nowrap;
+    padding: 8px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+
+.navbar-menu li:hover {
+    
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border-radius: 4px;
+}
+
+.navbar-icons {
+    right: 40px;
+   
+    
+    list-style: none;
+    color: var(--text-color);
+    display: flex;
+    cursor: pointer;
+}
+
+.navbar-icons li {
+    padding: 8px 12px;
+}
+
+.navbar-icons li:hover{
+    background-color: var(--accent-color);
+    border-radius: 30px;
+}
+
+.navbar-togglebutton {
+    display: none;
+    position: absolute;
+    right : 32px;
+    font-size: 24px;
+    color: var(--text-color);
+    
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 8px 24px;
+        
+    }
+
+    .navbar-logo {
+        padding-right: 40px;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        display: none;        
+    }
+
+    .navbar-menu li {
+        width: 100%;
+        text-align: center;
+        
+    }
+
+    .navbar-icons {
+        display: none;
+        justify-content: center;
+        width: 100%;
+        padding-right: 40px;
+        margin-top: -10px;
+        overflow: overlay;
+     }
+
+    .navbar-togglebutton {
+        display: block;
+    }
+
+    .navbar-menu.active,
+    .navbar-icons.active {
+        display: flex;
+    }
+}
+
+
+
+.main-footer {
+    border-top: 4px solid var(--accent-color);
+    width: 100%;
+    font-weight: bold;
+    background-color: var(--background-color);
+    text-align: center;
+    padding: 8px 0;
+    color: var(--text-color);
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+    border-top-left-radius: -10px;
+    border-top-right-radius: -10px;
+}
